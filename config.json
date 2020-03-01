@@ -1,0 +1,21 @@
+{
+    "repositories": [{
+            "name": "go-github-stats",
+            "userInterfaceUrl": "https://github.com/kenyonnick/go-github-stats",
+            "repositoryApiUrl": "https://api.github.com/repos/kenyonnick/go-github-stats",
+            "baseBranch": "master",
+            "comparisonBranches": [
+                "exampleBranch"
+            ]
+        },
+        {
+            "name": "go-github-stats",
+            "userInterfaceUrl": "https://github.com/kenyonnick/go-github-stats",
+            "repositoryApiUrl": "https://api.github.com/repos/kenyonnick/go-github-stats",
+            "baseBranch": "master",
+            "comparisonBranches": [
+                "exampleBranch"
+            ]
+        }
+    ]
+}
