@@ -9,10 +9,10 @@ import (
 
 func main() {
 	var configuration Configuration = LoadConfiguration("config.json")
-	prettyPrintJSON(configuration.Repositories[0])
 
 	for i := 0; i < len(configuration.Repositories); i++ {
 		var repository Repository = configuration.Repositories[i]
+		name := repository.Name
 		apiURL := repository.RepositoryAPIURL
 		baseBranch := repository.BaseBranch
 		comparisonBranches := repository.ComparisonBranches
@@ -20,6 +20,7 @@ func main() {
 		for j := 0; j < len(comparisonBranches); j++ {
 			comparisonBranch := comparisonBranches[j]
 			result := compareBranchToBase(apiURL, baseBranch, comparisonBranch)
+			result.Message = fmt.Sprintf("[%s] Comparing %s to %s", name, comparisonBranch, baseBranch)
 			prettyPrintJSON(result)
 		}
 	}

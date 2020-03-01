@@ -19,7 +19,26 @@ Modify `config.json` to setup the repositories you want a report on. The provide
 
 ## Running
 
-If you're in the top directory of the repo and you're trying to run the application, try a classic `go run`.
+If you're in the top directory of the repo and you're trying to run the application, try a classic `go run .` and let it rip, tater chip.
+
+The output should look something like this:
+
+```json
+{
+    "Message": "[go-github-stats] Comparing exampleBranch to master",
+    "status": "behind",
+    "ahead_by": 0,
+    "behind_by": 1
+}
+{
+    "Message": "[go-github-stats] Comparing exampleBranch to master",
+    "status": "behind",
+    "ahead_by": 0,
+    "behind_by": 1
+}
+```
+
+Currently all that is reported is a comparison between branches to let you know if you're falling behind in merging changes forward.
 
 ## TO-DO/Goals
 - [ ] Create Markdown report builder
